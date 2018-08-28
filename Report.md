@@ -19,7 +19,7 @@ guess endpoint
 
 ## DESCRIPTION STEP BY STEP
 
-![image0](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image0.png)
+![image0](./misc/image0.png)
 
 Our code is running in a loop with a finite number of episode which is limited by the n_episodes parameter
 
