@@ -19,28 +19,28 @@ guess endpoint
 
 ## DESCRIPTION STEP BY STEP
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image0.jpg)
+![image0](https://github.com/GaylouM/DRLND-Navigation/misc/image0.JPG)
 
 Our code is running in a loop with a finite number of episode which is limited by the n_episodes parameter
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image1.jpg)
+![image1](https://github.com/GaylouM/DRLND-Navigation/misc/image1.JPG)
 
 We start by resetting the environment with the 'env.reset' method setting train_mode to True to accelerate the training.
 Then we are getting the first state with the env_info.vector_observations method
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image2.jpg)
+![image2](https://github.com/GaylouM/DRLND-Navigation/misc/image2.JPG)
 
 We are then entering the timestep loop which is constrained by both the maximum number of timestep per episode parameter max_t and the possible end of the episode.
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image3.jpg)
+![image3](https://github.com/GaylouM/DRLND-Navigation/misc/image3.JPG)
 
 We are calling the agent.act method which take as parameters the current state and epsilon and returns an action inferencing the Torch model.
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image4.jpg)
+![image4](https://github.com/GaylouM/DRLND-Navigation/misc/image4.JPG)
 
 This action is used as parameter to take a step forward in the environment by passing it to the step method of the environment object, and return a set of new observation
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image5.jpg)
+![image5](https://github.com/GaylouM/DRLND-Navigation/misc/image5.JPG)
 
 from those we are extracting the next state 'env_info.vector_observations[0]' and reward 'env_info.rewards[0]' and status of the environment.
 
@@ -48,4 +48,4 @@ Eventually the step method of agent is called which take as parameters state, ac
 
 Then the loop is running for an other timestep until it reaches the conditions to break and start a new episode again.
 
-![Dqn function](https://github.com/GaylouM/DRLND-Navigation/misc/image6.jpg)
+![image6](https://github.com/GaylouM/DRLND-Navigation/misc/image6.JPG)
