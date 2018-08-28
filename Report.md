@@ -23,24 +23,24 @@ guess endpoint
 
 Our code is running in a loop with a finite number of episode which is limited by the n_episodes parameter
 
-![image1](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image1.png)
+![image1](./misc/image1.png)
 
 We start by resetting the environment with the 'env.reset' method setting train_mode to True to accelerate the training.
 Then we are getting the first state with the env_info.vector_observations method
 
-![image2](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image2.png)
+![image2](./misc/image2.png)
 
 We are then entering the timestep loop which is constrained by both the maximum number of timestep per episode parameter max_t and the possible end of the episode.
 
-![image3](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image3.png)
+![image3](./misc/image3.png)
 
 We are calling the agent.act method which take as parameters the current state and epsilon and returns an action inferencing the Torch model.
 
-![image4](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image4.png)
+![image4](./misc/image4.png)
 
 This action is used as parameter to take a step forward in the environment by passing it to the step method of the environment object, and return a set of new observation
 
-![image5](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image5.png)
+![image5](./misc/image5.png)
 
 from those we are extracting the next state 'env_info.vector_observations[0]' and reward 'env_info.rewards[0]' and status of the environment.
 
@@ -48,4 +48,4 @@ Eventually the step method of agent is called which take as parameters state, ac
 
 Then the loop is running for an other timestep until it reaches the conditions to break and start a new episode again.
 
-![image6](https://github.com/GaylouM/DRLND-Navigation/tree/master/misc/image6.png)
+![image6](./misc/image6.png)
