@@ -8,7 +8,7 @@ Navigation is an agent built to navigate through bananas trying to avoid blue ba
 This agent must maximize its reward and earns 1 when it grabs yellow bananas and loses 1 when it catch blue bananas.
 The algorithm using the simple Deep-Q learning algorithm. This algorithm is made of two interleaved processes. One is where we sample the environment by performing actions, and we store experience tuple (S, A, R, S') in replay memory D and one who learns from that batch using gradient descent update step
 
-## DESCRIPTION STEP BY STEP
+## DESCRIPTION OF THE ALGORITHM
 
 ![image0](./misc/image0.png)
 
@@ -41,6 +41,18 @@ Then the loop is running for an other timestep until it reaches the conditions t
 
 ![image6](./misc/image6.png)
 
+## HYPERPARAMETERS
+
+Hyperparameters did sufficiently well by remaining the same than for the Lunar Lander coding exercise ones. The buffer size was taken equal to 1e5, the batch size to 64, gamma to 0.99, tau to 1e-3, LR to 5e-4 and the network was updated every 4 steps.
+
+## MODEL ARCHITECTURE OF THE NEURAL NETWORK
+
+The architecture for the neural network remained the same than the one we use in the DQN coding exercise applied to the LunarLander, except that this time state and action were not the same sizes. The model was made of 2 hidden layers which are both convolving 64 filters. The entire algorithm didn't struggle to adapt since we achieved a score of 13 in less than 600 iterations.
+
 ## PLOT OF REWARD
 
 ![image7](./misc/image7.png)
+
+## DISCUSSION
+
+As Deep Q-learning tends to overestimate action values, I would later be tempted to improve it first with Double Q-Learning before taking a try with Deep Mind Rainbow algorithm and ultimately testing the OpenAI PPO algorithm which did wonders during The International of Dota 2 by winning for the first time against the 99.95th-percentile Dota players.
