@@ -40,3 +40,7 @@ Eventually, the step method of the agent is called which take as parameters stat
 Then the loop is running for an other timestep until it reaches the conditions to break and start a new episode again.
 
 ![image6](./misc/image6.png)
+
+## PLOT OF REWARD
+
+![image7](./misc/image7.png)
